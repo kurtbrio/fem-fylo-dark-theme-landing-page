@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-email-bg: hsl(217, 28%, 15%);
+  --color-main-bg: hsl(218, 28%, 13%);
+  --color-footer-bg: hsl(216, 53%, 9%);
+  --color-testimonials-bg: hsl(219, 30%, 18%);
+
+  --color-cta-cyan: hsl(176, 68%, 64%);
+  --color-cta-blue: hsl(198, 60%, 50%);
+  --color-error: hsl(0, 100%, 63%);
+
+  --color-custom-white: hsl(0, 0%, 100%);
+
+  --font-primary: "Raleway", serif;
+  --font-body: "Open Sans", serif;
+}
+
+button,
+li {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+button {
+  @apply font-primary font-bold text-custom-white;
+}
+
+p,
+ul {
+  @apply text-custom-white/70 text-sm;
+}
