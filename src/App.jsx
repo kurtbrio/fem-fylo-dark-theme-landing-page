@@ -8,9 +8,7 @@ const App = () => {
     <>
       <ThemeContextProvider>
         <Header />
-        <div className="flex flex-col gap-5">
-          <LandingPage />
-        </div>
+        <LandingPage />
       </ThemeContextProvider>
     </>
   );

@@ -22,7 +22,11 @@
 
 button,
 li {
-  cursor: pointer;
+  @apply cursor-pointer;
+}
+
+button {
+  @apply font-primary;
 }
 
 h1,
@@ -31,12 +35,11 @@ h3,
 h4,
 h5,
 h6,
-header,
-button {
+header {
   @apply font-primary font-bold text-custom-white;
 }
 
 p,
 ul {
-  @apply text-custom-white/70 text-sm;
+  @apply text-custom-white/70 text-sm font-body;
 }
