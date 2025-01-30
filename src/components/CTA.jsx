@@ -6,7 +6,7 @@ const CTA = ({ text, submit }) => {
       className={`bg-gradient-to-r from-cta-cyan to-cta-blue rounded-full text-sm text-custom-white hover:to-cta-cyan hover:opacity-90 font-bold h-12 w-56 ${
         submit ? "w-full" : ""
       }`}
-      type="button"
+      type={submit ? "submit" : "button"}
     >
       {text}
     </button>
