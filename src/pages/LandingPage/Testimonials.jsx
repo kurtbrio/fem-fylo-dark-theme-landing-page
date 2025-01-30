@@ -29,25 +29,29 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="flex flex-col relative mx-14 gap-5">
-      <div className="absolute top-[-15px] left-0 z-0 w-5 h-5 font-body">
+    <div className="flex flex-col md:flex-row relative mx-14 md:mx-16 lg:mx-24 xl:mx-30 gap-5 lg:gap-10 pb-72">
+      <div className="absolute -top-[12.5px] md:-top-[20px] lg:-top-[25px] left-0 md:-left-1.5 w-5 md:w-8 lg:w-10 h-5 md:h-8 lg:h-10 font-body z-0">
         <img src="backgrounds/bg-quotes.png" />
       </div>
       {testimonialsData.map((testimonial, index) => (
         <div
-          className="flex flex-col z-50 p-5 bg-testimonials-bg text-[10px] gap-4 rounded-sm"
+          className="flex flex-col z-50 p-5 bg-testimonials-bg light:bg-testimonials-bg-light text-[10px] gap-4 rounded-sm xl:text-xs"
           key={index}
         >
-          <div className=" text-custom-white/70">{testimonial.testimonial}</div>
+          <div className="text-custom-white/70 light:text-lightmode/70 lg:text-[17px]">
+            {testimonial.testimonial}
+          </div>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full overflow-hidden">
+            <div className="w-8 h-8 rounded-full overflow-hidden">
               <img src={testimonial.image} alt={testimonial.name} />
             </div>
             <div>
-              <div className="text-custom-white text-bold text-[13px]">
+              <div className="text-custom-white light:text-lightmode text-bold text-sm ">
                 {testimonial.name}
               </div>
-              <div className="text-custom-white/70">{testimonial.position}</div>
+              <div className="text-custom-white/70 light:text-lightmode/70 text-xs">
+                {testimonial.position}
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
 
 @theme {
   --color-email-bg: hsl(217, 28%, 15%);
@@ -10,23 +10,28 @@
   --color-footer-bg: hsl(216, 53%, 9%);
   --color-testimonials-bg: hsl(219, 30%, 18%);
 
+  --color-email-bg-light: hsl(217, 100%, 97%);
+  --color-main-bg-light: hsl(218, 100%, 99%);
+  --color-footer-bg-light: hsl(216, 50%, 90%);
+  --color-testimonials-bg-light: hsl(219, 40%, 92%);
+
   --color-cta-cyan: hsl(176, 68%, 64%);
   --color-cta-blue: hsl(198, 60%, 50%);
   --color-error: hsl(0, 100%, 63%);
 
   --color-custom-white: hsl(0, 0%, 100%);
+  --color-lightmode: hsl(218, 28%, 13%);
 
   --font-primary: "Raleway", serif;
   --font-body: "Open Sans", serif;
 }
 
-button,
 li {
-  @apply cursor-pointer;
+  @apply cursor-pointer transition-all ease-in-out duration-500;
 }
 
 button {
-  @apply font-primary;
+  @apply font-primary cursor-pointer;
 }
 
 h1,
@@ -36,10 +41,10 @@ h4,
 h5,
 h6,
 header {
-  @apply font-primary font-bold text-custom-white;
+  @apply font-primary font-bold text-custom-white light:text-lightmode;
 }
 
 p,
 ul {
-  @apply text-custom-white/70 text-sm font-body;
+  @apply text-custom-white/70 light:text-lightmode/70 text-sm font-body xl:text-base;
 }

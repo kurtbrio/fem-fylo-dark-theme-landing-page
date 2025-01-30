@@ -6,10 +6,10 @@ const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+    if (theme === "light") {
+      document.documentElement.classList.add("light");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("light");
     }
   }, [theme]);
 

@@ -29,7 +29,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="grid gap-20 px-[35px] sm:px-40 md:px-44 md:grid-cols-2">
+    <div className="grid gap-20 px-[35px] sm:px-40 md:px-44 lg:px-60 xl:px-[340px] md:grid-cols-2">
       {featuresData.map((feature, index) => (
         <div
           className="flex flex-col items-center text-center gap-8"
@@ -38,7 +38,7 @@ const Features = () => {
           <div>
             <img
               src={`icons/${feature.icon}.svg`}
-              alt={feature.icon.split("-").join(" ")}
+              aria-hidden="true"
               className="h-[50px]"
             />
           </div>
